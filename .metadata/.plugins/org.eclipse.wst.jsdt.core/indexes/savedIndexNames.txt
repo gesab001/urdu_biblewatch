@@ -1,0 +1,8 @@
+INDEX VERSION 1.3+C:\Users\giova\Desktop\tizen_workspaces\urdu_biblewatch\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+287045724.index
+2955964723.index
+4015833417.index
+868874695.index
+1544089654.index
+4145166603.index
+790236689.index

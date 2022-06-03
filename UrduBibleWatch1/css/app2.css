@@ -1,0 +1,85 @@
+
+
+
+
+#bibleMinuteVerse{
+	font-size: 24px;
+}
+
+
+
+
+
+
+
+.menuButton{
+	background-image: url("menu.png");
+	left: 10%;
+    top: 22%;	
+    transform: translate(0%, 0%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.verse-change-list-item{
+	color: white;
+	background-color: blue;
+	width: 80%;
+	text-align: center;
+	margin:auto;
+	font-size: 24px;
+	border-radius: 9999px;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+#readingPlanDayCount:active{
+	background-color: blue;
+	opacity: 0.5;
+}
+
+
+
+
+
+
+
+
+.dateTimeDisplay{
+	position: absolute;
+	top: 5%;
+	left: 50%;
+	font-size: 24px;
+	transform: translate(-50%, 0%);
+	color: white;
+	
+}
+
+
+

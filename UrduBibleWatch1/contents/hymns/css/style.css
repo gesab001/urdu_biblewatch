@@ -1,0 +1,264 @@
+
+#more-option-button {
+    z-index: 1;
+}
+
+#music_player_content {
+    margin: 0;
+}
+
+#music_player_header {
+    height: 0px;
+}
+
+#div_background {
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    background-image: url('../assets/music/image/music_no_album_art.png');
+    background-size: 100% 100%;
+    transition: all 0.5s ease-out;
+    opacity: 0.5;
+}
+
+.btn {
+    border-radius: 50%;
+}
+
+.btn:active {
+    background-color: rgba(250,250,250,0.4);
+    transition: all 0.2s ease;
+}
+
+#div_now_playing {
+    position: absolute;
+    width: 360px;
+    height: 360px;
+}
+
+
+#div_download {
+    position: absolute;
+    width: 96px;
+    height: 96px;
+    left: 132px;
+    top: 100px;
+}
+.download{
+	    background-image: url('music_controller_btn_download.png');
+	    background-repeat: no-repeat;
+        background-size: contain;
+}
+.removedownload{
+	    background-image: url('music_controller_btn_play.png');
+	
+}
+#div_play {
+    position: absolute;
+    width: 96px;
+    height: 96px;
+    left: 132px;
+    bottom: 35px;
+}
+
+#div_pause {
+    position: absolute;
+    width: 96px;
+    height: 96px;
+    left: 132px;
+    bottom: 35px;
+}
+
+.play {
+    background-image: url('music_controller_btn_play.png');
+}
+
+.pause {
+    background-image: url('music_controller_btn_pause.png');
+}
+
+#div_prev {
+    position: absolute;
+    width: 66px;
+    height: 66px;
+    left: 40px;
+    bottom: 50px;
+    background-image: url('music_controller_btn_prev.png');
+}
+
+#div_next {
+    position: absolute;
+    width: 66px;
+    height: 66px;
+    left: 254px;
+    bottom: 50px;
+    background-image: url('music_controller_btn_next.png');
+}
+
+
+#div_title {
+    position: absolute;
+    width: 258px;
+    height: 47px;
+    left: 72px;
+    top: 234px;
+    line-height: 47px;
+    text-align: center;
+    font-size: 36px;
+    color: white;
+    overflow: hidden;
+}
+
+#div_sub_title {
+    position: absolute;
+    width: 228px;
+    height: 37px;
+    line-height: 37px;
+    top: 281px;
+    left: 66px;
+    font-size: 28px;
+    text-align: center;
+    color: white;
+}
+
+
+#updateMusicListButton:active{
+	opacity: 0.5;
+}
+
+#downloadSongProgressContainer{
+	position: absolute;
+	top:5%;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	height: 56px;
+	
+}
+.languageButton{
+	background-image: url("../../../css/languages.png");
+	left: 30%;
+    top: 22%;	
+    transform: translate(0%, 0%);	
+}
+
+.searchButton{
+	background-image: url("../../../css/search.png");
+	left: 30%;
+    top: 22%;	
+    transform: translate(0%, 0%);	
+}
+
+.musicListButton{
+	background-image: url("../../../css/menu.png");
+	left: 10%;
+    top: 22%;	
+    transform: translate(0%, 0%);		
+}
+
+.sortByButton{
+	background-image: url("../../../css/sort.png");
+	left: 10%;
+    top: 22%;	
+    transform: translate(0%, 0%);		
+}
+.updateButton{
+	background-image: url("../../../css/update.png");
+	right: 30%;
+    top: 22%;	
+    transform: translate(0%, 0%);		
+}
+
+
+
+.setting-item{
+	color: white;
+	background-color: blue;
+	width: 80%;
+	text-align: center;
+	margin:auto;
+	font-size: 24px;
+	border-radius: 9999px;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+
+.setting-item:active{
+	opacity: 0.5;
+}
+
+.setting-title{
+	width: 80%;
+	text-align: center;
+	color: white;
+	margin:auto;
+	font-size: 24px;
+	border-radius: 9999px;
+	padding: 10px;
+	margin-bottom: 10px;	
+	
+}
+
+.deleteMusicButton{
+    background-image: url("../../../css/trash.png");
+	left: 30%;
+    top: 22%;	
+    transform: translate(0%, 0%);	
+}
+.backButton{
+	background-image: url("../../../css/back.png");
+	left: 10%;
+    top: 22%;	
+    transform: translate(0%, 0%);		
+}
+.downloadedMusicButton{
+	background-image: url("../../../css/folder.png");
+	left: 30%;
+    top: 22%;	
+    transform: translate(0%, 0%);	
+} 
+.favoritesListButton{
+	background-image: url("../../../css/favorites.png");
+	right: 30%;
+    top: 22%;	
+    transform: translate(0%, 0%);		
+}
+.allMusicListButton{
+	background-image: url("../../../css/atoz.png");
+	right: 30%;
+    top: 22%;	
+    transform: translate(0%, 0%);		
+} 
+
+.searchresults{
+	position: absolute;
+	left: 50%;
+	top: 10%;
+	width: 70%;
+	height: 10%;
+	transform: translate(-50%, 0%);
+	font-size: 30px;
+	text-align: center;	
+	color: white;
+	padding: 10px;
+	background-color: blue;
+	border-radius: 9999px;
+	display: none;
+}
+.searchresults:active{
+	opacity: 0.5;
+}
+.hymnSearchInputField{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+#downloadHymnStatusFail{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;	
+}

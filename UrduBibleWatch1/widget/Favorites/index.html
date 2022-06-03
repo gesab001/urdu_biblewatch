@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width,user-scalable=no">
+	<title>BibleWatch</title>
+	<!-- load theme file for your application -->
+ 
+    <script src="main.js"></script>
+    <style>
+       .title{
+         position: absolute;
+         top: 20%;
+         left: 50%;
+         transform: translate(-50%, 0%);    
+         font-size: 40px; 
+         width: 300px;
+         height: 200px;   
+         color: white;
+           
+       }
+       .wordofgodContainer{
+        position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         width: 300px;
+         height: 200px;   
+       }
+       #wordofgod{
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         color: white;
+         width: 300px;
+         font-size: 30px;
+         text-align: center;
+         overflow-y: scroll;
+         text-decoration: underline;
+       }
+       
+       #add{
+         position: absolute;
+         width: 360px;
+         height: 360px;
+         bottom: -80%;
+         left: 50%;
+         transform: translate(-50%, 0%);
+         background-color: blue;
+         color: white;
+         font-size: 40px;
+         text-align: center;
+         overflow: hidden;
+       }
+       .arrowLeftContainer{
+		  width: 50px;
+		  height: 50px;
+		  position: absolute;
+		  left:3%;
+		  top:50%;  
+		  transform: translate(0%, -50%);	
+		}
+		
+		.arrowRightContainer{
+		  width: 50px;
+		  height: 50px;
+		  position: absolute;
+		  right:3%;
+		  top:50%;  
+		  transform: translate(0%, -50%);	
+		
+		}
+		
+		.arrow {
+		  margin: auto;
+		  border: solid  5px white;
+		  border-width: 0px 7px 7px 0px;
+		  display: inline-block;
+		  padding: 3px;
+		  position: absolute;
+		  width: 35px;
+		  height: 35px;
+		  
+		}
+		
+		.left {
+		  transform: rotate(135deg);
+		  -webkit-transform: rotate(135deg);
+		
+		  
+		}
+		
+		.right {
+		  transform: rotate(-45deg);
+		  -webkit-transform: rotate(-45deg);
+		}
+
+    </style>	
+</head>
+<body style="background-color: red;">
+
+ <div class="title" style="text-align: center"><div >Favorite Verses</div></div>
+ <div class="wordofgodContainer">
+    <div id="wordofgod">You have no favorite verses. Add a verse to favorites in BibleWatch. Your favorites will show up here.</div> 
+ </div>
+ <div id="prevVerse" class="arrowLeftContainer"><div class="left arrow"></div></div>    
+ <div id="nextVerse" class="arrowRightContainer"><div class="right arrow"></div></div>		
+ 
+ <div id="add">Add</div>
+</body>
+</html>

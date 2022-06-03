@@ -1,0 +1,38 @@
+
+.changePlan{
+	background-image: url("exchange.png");
+	left: 10%;
+    top: 22%;	
+    transform: translate(0%, 0%);	
+}
+
+
+.plan-item{
+	color: white;
+	background: blue;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 70%;
+	text-align: center;
+	border-radius: 9999px;
+	margin:auto;
+	font-size: 26px;
+	padding: 20px;
+	word-break: normal;
+	
+}
+
+.plan-item:active{
+	opacity: 0.5;
+}
+
+.selectANewReadingPlanLink{
+	font-size: 30px;
+	text-decoration :  underline;
+	font-weight : bold;
+}
+.selectANewReadingPlanLink:active{
+	opacity: 0.5;
+}

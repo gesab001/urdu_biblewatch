@@ -1,0 +1,165 @@
+
+#menuPageIndicator{
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  width: 50%;
+  transform: translate(-50%, 0%);
+  text-align: center;
+  z-index: 100;
+}
+.dotstyle ul{
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	}
+	
+.dotstyle li {
+    position: relative;
+	display: block;
+	float: left;
+	margin: 0 16px;
+	width: 16px;
+	height: 16px;
+}
+.dotstyle li div{
+
+	}
+.dotstyle li div div{
+	border-radius: 50%;
+	height: 10px;
+	width: 10px;
+	
+	background-color: white;
+
+}
+
+.dotstyle li.current div div{
+	background-color: white;
+	-webkit-transform: scale(1.5);
+	transform: scale(1.5);
+}
+
+.searchButton{
+	background-image: url("../images/search.png");
+
+}
+.dictionaryButton{
+	background-image: url("../images/dictionary.png");
+
+}
+.storiesButton{
+	background-image: url("../images/stories.png");
+
+}
+.favoritesButton{
+	background-image: url("../images/favorites.png");
+	right: 10%;
+    top: 30%;		
+}
+.aboutButton{
+	background-image: url("../images/about.png");
+	right: 10%;
+    top: 30%;		
+}
+.quizButton{
+	background-image: url("../images/quiz.png");
+	right: 10%;
+    top: 30%;		
+}
+.bookmarkButton{
+	background-image: url("../images/bookmark.png");
+	left: 10%;
+    bottom: 30%;	
+	
+}
+.concordanceButton{
+	background-image: url("../images/strongsconcordance.png");
+	left: 10%;
+    bottom: 30%;	
+	
+}
+
+.devotionalButton{
+	background-image: url("../images/devotional.png");
+	left: 10%;
+    bottom: 30%;	
+	
+}
+.settingsButton{
+	background-image: url("../images/settings.png");
+	right: 10%;
+    bottom: 30%;	
+}
+.helpButton{
+	background-image: url("../images/help.png");
+	right: 10%;
+    bottom: 30%;	
+}
+.musicButton{
+	background-image: url("../images/music.png");
+	right: 10%;
+    bottom: 30%;	
+}
+.donationButton{
+	background-image: url("../images/donation.png");
+	left: 10%;
+    top: 30%;	
+}
+.atlasButton{
+	background-image: url("../images/atlas.png");
+	left: 10%;
+    top: 30%;	
+}
+.healthButton{
+	background-image: url("../images/health.png");
+	left: 10%;
+    top: 30%;	
+}
+.readingplanButton{
+	background-image: url("../images/readingplan.png");
+
+}
+.videosButton{
+	background-image: url("../images/videos.png");
+
+}
+.hymnsButton{
+	background-image: url("../images/karaoke.png");
+	left: 50%;
+    bottom: 10%;	
+    transform: translate(-50%, 0%);
+}
+.browseButton{
+	background-image: url("../images/browse.png");
+	
+    	left: 50%;
+    top: 50%;	
+    transform: translate(-50%, -50%);
+}
+.audioBibleButton{
+	background-image: url("../images/audio-book.png");
+	
+    	left: 50%;
+    top: 50%;	
+    transform: translate(-50%, -50%);
+}
+.bibleStudyButton{
+	background-image: url("../images/bible-study.png");
+	
+    	left: 50%;
+    top: 50%;	
+    transform: translate(-50%, -50%);
+}
+
+.topMiddleButton{
+	left: 50%;
+    top: 15%;	
+    transform: translate(-50%, 0%);
+}
+.bottomMiddleButton{
+	left: 50%;
+    bottom: 15%;	
+    transform: translate(-50%, 0%);
+}

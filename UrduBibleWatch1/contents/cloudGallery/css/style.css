@@ -1,0 +1,72 @@
+#zoom-image {
+    width: 720px;
+    height: 720px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#empty-icon {
+    width: 110px;
+    height: 98px;
+    top: 131px;
+    margin-left: 125px;
+    background-image: url("/images/gallery_icn_no_images.png");
+}
+
+.pressed {
+    opacity: 0.5;
+}
+
+.setting-item{
+	color: white;
+	background-color: blue;
+	width: 80%;
+	text-align: center;
+	margin:auto;
+	font-size: 24px;
+	border-radius: 9999px;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+
+.setting-item:active{
+	opacity: 0.5;
+}
+
+.setting-title{
+	width: 80%;
+	text-align: center;
+	color: white;
+	margin:auto;
+	font-size: 24px;
+	border-radius: 9999px;
+	padding: 10px;
+	margin-bottom: 10px;	
+	
+}
+.imageBackgroundListItem{
+	width: 100%;
+	text-align: center;
+    margin-bottom: 10px;
+}
+.thumbnail{
+	width: 250px;
+	height: 250px;
+	margin: auto;
+	background-size : cover;
+	background-position: center;
+	background-color: red;
+
+	}
+.imageBackgroundListItemText{
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	font-size: 26px;
+	color: white;
+	background-color: blue; 
+	margin-bottom: 10px;
+
+	
+}

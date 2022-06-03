@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta charset="utf-8" />
+    <meta name="description" content="MiniGallery" />
+    <title>Music</title>
+    <link rel="stylesheet" type="text/css" href="../../css/app.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+</head>
+
+<body>
+    <div id="HymnsPage" class="page hideScrollBarTrack" style="overflow-y: scroll; overflow-x:hidden;">
+
+        <div class="section" style="width: 100%; height: 100%; display: block">
+            <div class="hideScrollBarTrack content toolBar" style="overflow-y: scroll; overflow-x:hidden;">
+                <div class=setting-title id="listTitle" style="padding-top: 10%; padding-bottom: 10%;  width: 100%; ">Hymns List</div>
+
+                <div class="sortByButton imageButton noFlash" style="left:10%; transform:translate(0%, 0%);"></div>
+                <div class="searchButton imageButton noFlash" style="left:33%; transform:translate(0%, 0%);"></div>
+                <div class="favoritesListButton imageButton noFlash" style="right:33%; transform:translate(0%, 0%);"></div>
+                <div class="updateButton imageButton noFlash" style="right:10%; transform:translate(0%, 0%);"></div>
+
+
+                <div id="hymnListSection" class="settingOption" style="margin-top: 20%; z-index: -100;">
+                    <div id="MusicList" style="width: 100%; height:100%; text-align: center; margin-bottom: 50%;"></div>
+                </div>
+
+            </div>
+            <div id="searchSection" class="settingOption" style="display: none; margin-top: 20%;">
+                    <div id="SearchList" style="width: 90%; height:100%; text-align: center;">
+
+                        <div class="hymnSearchInputField">
+                            <input class="searchInputText" type="text" required>                        
+                        </div>  
+
+             
+                        <div id="goButtonSearch" class="marqueeNo">
+                            <div>FIND</div>
+                        </div>
+                    </div>
+             </div>
+           
+        </div>
+
+        <div id="minScreen" class="section" style="width: 100%; height: 100%; display: none">
+            <div class="progressCircleContainer" style="z-index: -10; display: none;">
+                <svg viewBox="-100 -100 200 200">
+                    <circle class="progressIndicator" id="songProgressBar" r="100" transform="rotate(-90)" />
+                </svg>
+            </div>
+            <div class="progressCircleContainer " style="z-index: -11; display: none;">
+                <svg viewBox="-100 -100 200 200">
+                    <circle class="progressIndicatorTrack" r="100" transform="rotate(-90)" />
+                </svg>
+            </div>
+
+
+            <div class="hideScrollBarTrack content toolBar" style="overflow-y: scroll; overflow-x:hidden;">
+
+                <div class=header id=SongCountTitle style="padding-top: 10%; padding-bottom: 10%;  width: 100%; ">Hymns</div>
+
+
+                <div class="musicListButton imageButton noFlash" style="left:10%; transform:translate(0%, 0%);"></div>
+                <div class="fontResizeButton imageButton noFlash" style="left:33%; transform:translate(0%, 0%);"></div>
+                <div class="addToFavoritesButton imageButton noFlash" style="right:33%; transform:translate(0%, 0%);"></div>
+                <div class="deleteFromFavoritesButton imageButton noFlash" style="display: none; right:33%; transform:translate(0%, 0%);"></div>
+                <div class="maximizeButton imageButton noFlash" style="right:10%; transform:translate(0%, 0%);"></div>
+
+                <div class="settingOptionSongLyrics" style="margin-top: 20%; z-index: -100;">
+                    <div id="songLyrics" style="	top:0%; left:50%; 	transform: translate(-50%, 0%); position:relative; max-height: 100%; max-width: 90%;" class="normalScreenVerseText hideScrollBarTrack"></div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+       <div id="fullScreen" class="section" style="display: none; width: 100%; height: 100%">
+            <div class="clockIcon imageButton"></div>
+        	<div class="settingOptionSongLyrics" style="margin-top: 20%; z-index: -100;">
+                    <div id="songLyrics2" style="	top:0%; left:50%; 	transform: translate(-50%, 0%); position:relative; max-height: 100%; max-width: 90%;" class="normalScreenVerseText hideScrollBarTrack"></div>
+            </div>
+        </div>
+
+
+
+
+        <div class="section" style="width: 100%; height: 100%; display: none">
+            <div class="progressCircleContainer progressCircleContainerDownloadingPage" style="z-index: -10;">
+                <svg viewBox="-100 -100 200 200">
+                    <circle class="progressIndicator" id="progressBar" r="100" transform="rotate(-90)" />
+                </svg>
+            </div>
+            <div class="progressCircleContainer progressCircleContainerDownloadingPage" style="z-index: -11;">
+                <svg viewBox="-100 -100 200 200">
+                    <circle class="progressIndicatorTrack" r="100" transform="rotate(-90)" />
+                </svg>
+            </div>
+            <div class=header id=downloadingTitle>Downloading</div>
+            <div class=setting-title id="downloadBibleStatus">You are not connected to the internet</div>
+            <div class=setting-title id="downloadBibleStatusNoConnection">Network connection is not available. Download is not possible. Connect to the internet, then <span class="linkStyle tryAgain">TRY AGAIN</span>
+            </div>
+            
+            <div class=setting-title id="downloadHymnStatusFail">
+                <p>Download failed.</p>
+            
+                <p class="linkStyle tryAgain2">TRY AGAIN</p>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+    <script src="../../js/page-handler.js"></script>
+
+    <script src="../../js/swipe.js"></script>
+    <script src="../../js/ui.js"></script>
+    <script src="../../js/filesystem.js"></script>
+    <script src="../../js/listmaker.js"></script>
+    <script src="../../js/progress.js"></script>
+    <script src="../../js/download.js"></script>
+    <script src="../../js/settingsData.js"></script>
+    <script src="../../js/favorites.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/hymn_app_fontSize.js"></script>
+    <script src="js/hymn_app_favorites.js"></script>
+    <script src="js/searchHymn.js"></script>
+    <script src="js/maximize.js"></script>
+    <script src="js/initHymnfile.js"></script>
+
+</body>
+
+</html>

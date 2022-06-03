@@ -1,0 +1,78 @@
+
+.languagesListButton{
+	background-image: url("../images/languages.png");
+	left: 50%;
+    top: 22%;	
+    transform: translate(-50%, 0%);	
+}
+
+
+.backgroundButton{
+	background-image: url("../images/background.png");
+	left: 30%;
+    top: 22%;	
+    transform: translate(0%, 0%);
+}
+
+.textToSpeechButton{
+	background-image: url("../images/tts.png");
+	right: 30%;
+    top: 22%;	
+    transform: translate(0%, 0%);	
+}
+
+
+.galleryButton{
+	background-image: url("../images/gallery.png");
+	left: 20%;
+    top: 60%;	
+    transform: translate(0%, -50%);
+}
+
+
+
+
+
+.colorsButton{
+	background-image: url("../images/color-wheel.png");
+	right: 20%;
+    top: 60%;	
+    transform: translate(0%, -50%);
+}
+
+.updateBiblesListButton{
+	background-image: url("../images/update.png");
+	right: 15%;
+    top: 22%;	
+    transform: translate(0%, 0%);
+}
+
+
+
+.setting-item{
+	color: white;
+	background-color: blue;
+	width: 80%;
+	text-align: center;
+	margin:auto;
+	font-size: 24px;
+	border-radius: 9999px;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+
+.setting-item:active{
+	opacity: 0.5;
+}
+.setting-title{
+	width: 80%;
+	text-align: center;
+	color: white;
+	margin:auto;
+	font-size: 24px;
+	border-radius: 9999px;
+	padding: 10px;
+	margin-bottom: 10px;	
+	
+}

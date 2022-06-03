@@ -1,0 +1,47 @@
+.delete-download-bible-list-item{
+	color: white;
+	background-color: blue;
+	width: 80%;
+	text-align: left;
+	margin:auto;
+	font-size: 24px;
+	border-radius: 9999px;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+.download-bible-list-item{
+	color: white;
+	background-color: blue;
+	width: 80%;
+	text-align: center;
+	margin:auto;
+	font-size: 24px;
+	border-radius: 9999px;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+.editDownloadedBiblesButton{
+	background-image: url("../../../css/edit.png");
+    top: 20%;
+    right:10%;
+}
+.setting-title{
+	width: 80%;
+	text-align: center;
+	color: white;
+	margin:auto;
+	font-size: 24px;
+	border-radius: 9999px;
+	padding: 10px;
+	margin-bottom: 10px;	
+	
+}
+.trashDownloadedBibleButton{
+	background-image: url("../../../css/trash.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    float:right;
+
+}

@@ -1,0 +1,119 @@
+.searchresults{
+	position: absolute;
+	left: 50%;
+	bottom: 10%;
+	width: 70%;
+	height: 10%;
+	transform: translate(-50%, 0%);
+	font-size: 30px;
+	text-align: center;	
+	color: white;
+	padding: 10px;
+	background-color: blue;
+	border-radius: 9999px;
+	display: none;
+}
+.searchresults:active{
+	opacity: 0.5;
+}
+.searchButton{
+	background-image: url("search.png");
+    transform: translate(0%, 0%);
+
+}
+.historyButton{
+	background-image: url("history.png");
+    transform: translate(0%, 0%);
+}
+.slideShowButton{
+	background-image: url("slideshow.png");
+    transform: translate(0%, 0%);
+}
+.editSearchHistoryButton{
+	background-image: url("edit.png");
+    transform: translate(0%, 0%);
+}
+.versionToSearchButton{
+	background-image: url("languages.png");
+    transform: translate(0%, 0%);	
+}
+.filterButton{
+		background-image: url("filter.png");
+    transform: translate(0%, 0%);	
+}
+
+.setting-item{
+	color: white;
+	background-color: blue;
+	width: 80%;
+	text-align: center;
+	margin:auto;
+	font-size: 24px;
+	border-radius: 9999px;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+
+.setting-item:active{
+	opacity: 0.5;
+}
+
+.setting-item-none{
+	color: white;
+	width: 80%;
+	text-align: center;
+	margin:auto;
+	font-size: 24px;
+	border-radius: 9999px;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+.trashDownloadedBibleButton{
+	background-image: url("../../../css/trash.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    float:right;
+
+}
+.delete-download-bible-list-item{
+	color: white;
+	background-color: blue;
+	width: 80%;
+	text-align: left;
+	margin:auto;
+	font-size: 24px;
+	border-radius: 9999px;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+.marqueeNoSearch {
+	border-radius: 9999px;
+	position: absolute;
+	bottom: 15%;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	background: rgba(0,47,66,255);
+	text-align: center;	
+	color: white;
+	font-size: 30px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	min-width: 150px;
+	height: 40px;
+	overflow: hidden;
+}
+.marqueeNoSearch div {
+    min-width: 100px;
+    height: 40px;
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+    left: 50%;
+}
