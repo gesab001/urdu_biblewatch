@@ -373,7 +373,7 @@ function deleteItem(){
 	var chapter = reference[1];
 	var verse = reference[2];
 	var textToDelete = book + " " + chapter + ":" + verse;
-	confirmDelete = confirm(TRANSLATIONS["confirmDelete"].replace("[TEXTTODELETE]", textToDelete));// "Are you sure you want to delete "+textToDelete+"?");
+	confirmDelete = confirm(TRANSLATIONS["confirmDelete"].replace("[***]", textToDelete));// "Are you sure you want to delete "+textToDelete+"?");
 	if (confirmDelete){
 		console.log(confirmDelete);
 		favoritesList.splice(favoriteVerseIndex, 1);
@@ -390,7 +390,7 @@ function deleteItem(){
 			}
 			updateFavoritesPage();
     		tizen.preference.setValue("favoriteVerses", JSON.stringify(favoritesList));
-    		alert(TRANSLATIONS["deletedSuccess"].replace("[TEXTTODELETE]", textToDelete));//textToDelete+"\nhas been deleted.");
+    		//alert(TRANSLATIONS["deletedSuccess"].replace("[***]", textToDelete));//textToDelete+"\nhas been deleted.");
 		}			
 	}
 }

@@ -18,10 +18,10 @@ LANG_JSON_DATA = {
     "DEFAULT_BIBLE": "urd",
     "TRANSLATIONS": {
         "COMMON": {
-            "of": " of ",
-            "proceedToSaveFavorites": "Save \n [TEXTTOSAVE] \n to favorites?",
-            "alreadySaveToFavorites": "[TEXTTOSAVE] \n already exists \n in your favorites.",
-            "savedToFavorites": "[TEXTTOSAVE] \n has been saved.",
+            "of": " / ",
+            "proceedToSaveFavorites": "Save \n [***] \n to favorites?",
+            "alreadySaveToFavorites": "[***] \n already exists \n in your favorites.",
+            "savedToFavorites": "[***] \n has been saved.",
             "alertSaved": "Saved.",
             "addBookmarkButton": "+",
             "enterBookmarkTitle": "Enter bookmark title",
@@ -31,10 +31,10 @@ LANG_JSON_DATA = {
             "confirmBackroundChange": "Use this \n color as \n background?"
         },
         "BOOKMARKS_PAGE": {
-            "confirmBookmark": "Bookmark \n [TEXTTOSAVE]?",
+            "confirmBookmark": "Bookmark \n [***]?",
             "bookmarks": "BOOKMARKS",
             "nobookmarks": "You have no bookmarks. Go to ",
-            "nobookmarkslink": "BROWSE",
+            "nobookmarkslink": "BOOKS",
             "nobookmarksend": " to add bookmarks"
         },
         "BROWSE_PAGE": {
@@ -45,8 +45,8 @@ LANG_JSON_DATA = {
         "FAVORITEVERSES_PAGE": {
             "title": "Favorites",
             "noFavoriteVerses": "You have no favorite verses",
-            "confirmDelete": "Are you sure \n you want \n to delete \n [TEXTTODELETE]?",
-            "deletedSuccess": "[TEXTTODELETE] \n has been deleted.",
+            "confirmDelete": "Are you sure \n you want \n to delete \n [***]?",
+            "deletedSuccess": "[***] \n has been deleted.",
             "noLookUp": "You have no \n favorite verses \n to look up."
         },
         "DONATIONS_PAGE": {
@@ -62,7 +62,7 @@ LANG_JSON_DATA = {
         },
         "CLOUDGALLERY_PAGE": {
             "numberOfImages": "5 images",
-            "chooseCategory": "CHOOSE CATEGORY",
+            "chooseCategory": "CATEGORY",
             "confirmChoice": "Use this \n as background \n image?",
             "animals": "animals",
             "beaches": "beaches",
@@ -91,17 +91,24 @@ LANG_JSON_DATA = {
             "loadingData": "LOADING DATA",
             "search": "Search",
             "find": ">",
-            "found": "Found [VALUE] verses in the [VERSION] bible",
-            "viewResults": "View Results",
+            "found": "Found [***] verses in the [+++] bible",
+            "viewResults": "Show",
             "noSearchHistory": "You have no search history",
             "edit": "EDIT"
         },
         "SETTINGS_PAGE": {
             "settings": "SETTINGS",
             "choose_background": "Choose Background",
+            "choose_bibleversion": "Choose Bible Version",
             "textToSpeech": "Text to Speech",
             "on": "TURN ON",
-            "off": "TURN OFF"
+            "off": "TURN OFF",
+            "chooseImageSource": "Select Source",
+            "confirmTTS": "Turn on Text-To-Speech?",
+            "alertLanguageShouldMatch": "(Note: Make sure TTS [***] language in your watch and your phone's language are the same. For example, if your watch is set to [+++], then your phone's language should be also [+++].",
+            "speechRateSample": "In the beginning God created the heaven and the earth",
+            "readBible": "Read the Bible",
+            "speechRateTitle": "Speech rate"
         },
         "READINGPLAN_PAGE": {
             "readingPlanPreferences": "readingPlanPreferences",
@@ -125,6 +132,20 @@ LANG_JSON_DATA = {
             "Read_Job_in_21_days": "Read the book of Job in 21 days",
             "Read_Psalms_in_28_days": "Read the book of Psalms in 28 days",
             "Read_Acts_in_14_days": "Read the book of Acts in 14 days"
+        },
+        "SETTINGS": {
+            "settings": "SETTINGS",
+            "choose_background": "Choose Background",
+            "choose_bibleversion": "Choose Bible Version",
+            "textToSpeech": "Text to Speech",
+            "on": "TURN ON",
+            "off": "TURN OFF",
+            "chooseImageSource": "Select Source",
+            "confirmTTS": "Turn on Text-To-Speech?",
+            "alertLanguageShouldMatch": "(Note: Make sure TTS [***] language in your watch and your phone's language are the same. For example, if your watch is set to [+++], then your phone's language should be also [+++].",
+            "speechRateSample": "In the beginning God created the heaven and the earth",
+            "readBible": "Read the Bible",
+            "speechRateTitle": "Speech rate"
         }
     },
     "READINGPLANS": {

@@ -1,8 +1,19 @@
+var localeLanguage = undefined;
 var languageTTS = 'en_US';
 var voicesTTS = speechSynthesis.getVoices();
 var synth = window.speechSynthesis;
 var voice;
-var isTTS = "off";
+var speechRate;
+
+function setSpeechRate(){
+	var value = 10;
+	if (tizen.preference.exists("speechratevalue")){
+		value = parseInt(tizen.preference.getValue("speechratevalue"));
+	}
+
+	speechRate =  value / 10;
+}
+var isTTS = false;
 if(tizen.preference.exists("tts_settings")){
 	isTTS = tizen.preference.getValue("tts_settings");
 }
@@ -19,12 +30,13 @@ var tts = (function(){
            });
     };
     
-    this.setTTSLanguage = function(lang){
+    var setTTSLanguage = function(lang){
         for (var i = 0; i < voicesTTS.length; i++) {
-            if (voicesTTS[i].lang === lang) {
-              voice = voicesTTS[i];
-              break;
-            }
+            console.log("voices: " + voicesTTS[i].lang);
+            //if (voicesTTS[i].lang === lang) {
+            //  voice = voicesTTS[i];
+            //  break;
+           // }
           }
     	languageTTS = lang;
     };
@@ -35,15 +47,42 @@ var tts = (function(){
 	this.play = function (text){
 		console.log("this.play isTTS: " + isTTS);
 		console.log("text: " + text);
-		
-		 if(isTTS==="on"){
-			 console.log("play this text: " + text);
-			 this.cancel();
-			 var speech = new SpeechSynthesisUtterance(text);
-			 //speech.voice = voice;
-			 speech.rate = 1;
-			 synth.speak(speech);			 
-		 }
+
+		var proceed = function(){
+			 if(isTTS){
+				 console.log("play this text: " + text);
+				 this.cancel();
+				 var speech = new SpeechSynthesisUtterance(text);
+				 //speech.voice = voice;
+				 speech.rate = speechRate;
+				 synth.speak(speech);			 
+			 }
+		}
+		var callback_localeLanguage = function(locale){
+			localeLanguage = locale;
+			console.log("localeLanguage: " + JSON.stringify(localeLanguage));
+			languageTTS = localeLanguage;
+			setTTSLanguage(languageTTS);
+			if (speechRate==undefined){
+				setSpeechRate();
+				proceed();
+			}else{
+				proceed();
+
+			}
+		};
+		if (localeLanguage==undefined){
+			localization.getDeviceLocaleLanguage(callback_localeLanguage);
+		}else{
+			if (speechRate==undefined){
+				setSpeechRate();
+				proceed();
+			}else{
+				proceed();
+
+			}
+		}
+
 
 	};
 	

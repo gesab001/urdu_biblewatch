@@ -15,104 +15,124 @@
 
 <body>
 
-<!-- settings page 6 -->
-<div id="SettingsPage" class=page  >
-  <div id="biblesListPage" class="content settingsContent" style="overflow:scroll; ">
-        <div class="header" id="settingsPageTitle">SETTINGS</div> 
-        
-        <!-- TOOL BAR -->
-        <div class="backgroundButton imageButton noFlash"></div>
-        <div  class="languagesListButton imageButton noFlash"  style="display: none"></div> 
-        <div class="textToSpeechButton imageButton noFlash"></div>
-        <div  class="updateBiblesListButton imageButton noFlash"  style="display: none"></div> 
-        
-       <!--   <a href="contents/gallery/index.html"  class="galleryButton imageButton noFlash" ></a> -->
-        
-        <div class="settingOption" style="display: none">
-	        <div class=setting-title >Choose Bible Version</div>
-	        <div id="backButton" style="width: 100%; padding-bottom:25px; display: none;"><div class="backButton imageButton noFlash" style="display: block; left: 50%; top: 44%;	transform: translate(-50%, 0%);	"></div></div> 
-	        <div id="biblesList" style="width: 100%; height: 100%"></div>
-        </div>
-        
-        <div class="settingOption"  >
-	        <div class=setting-title id="choose_background">Choose Background</div>
-               <div style="text-align: center; width: 100%; background-color: white;">
-                  <!--   <a href="../gallery/index.html"  class="galleryButton imageButton noFlash" style="display: none; width: 70px; height: 70px;"></a> -->
-                   <a  href="../cloudGallery/index.html" class="galleryButton imageButton noFlash" style="width: 70px; height: 70px;"></a> 
+    <!-- settings page 6 -->
+    <div id="SettingsPage" class=page>
+        <div id="biblesListPage" class="content settingsContent" style="overflow:scroll; ">
+            <div class="header" id="settingsPageTitle">SETTINGS</div>
 
-                   <a href="../color/index.html"   class="colorsButton  imageButton noFlash"  style="width: 70px; height: 70px;" ></a> 
-               
-               </div>
+            <!-- TOOL BAR -->
+            <div class="backgroundButton imageButton noFlash"></div>
+            <div class="languagesListButton imageButton noFlash" style="display: none"></div>
+            <div class="textToSpeechButton imageButton noFlash"></div>
+            <div class="updateBiblesListButton imageButton noFlash" style="display: none"></div>
 
-        </div>
-         <div class="settingOption"  style="display: none">
-	        <div class=setting-title id="textToSpeech">Text to Speech</div>
-               <div style="text-align: center; width: 100%; margin-bottom: 20%">
-                   <div class="radioTypeButton">
-        	          <input type="radio" id="ttson" name="tts_setting" value="on">
-					  <label id="labelOn" for="ttson"></label><br>           
-                   </div>
-                   <div class="radioTypeButton">
-					  <input type="radio" id="ttsoff" name="tts_setting" value="off" checked="true">
-					  <label id="labelOff" for="ttsoff"></label><br>                   
-                   </div>
-				
+            <!--   <a href="contents/gallery/index.html"  class="galleryButton imageButton noFlash" ></a> -->
 
-               </div>
-
-        </div>
-  </div>
-  <div class="content settingsContent" style="display: none">
-		  <div class="progressCircleContainer progressCircleContainerDownloadingPage" style="z-index: -10;" >
-		   <svg viewBox="-100 -100 200 200">
-		      <circle class="progressIndicator" id="progressBar" r="100" transform="rotate(-90)" />
-		   </svg>   
-		  </div>
-		  <div class="progressCircleContainer progressCircleContainerDownloadingPage"  style="z-index: -11;">
-		   <svg viewBox="-100 -100 200 200">
-		      <circle  class="progressIndicatorTrack"  r="100" transform="rotate(-90)"  />
-		   </svg>   
-		  </div>
-        <div class=header id=downloadingTitle>Downloading</div> 
-        <div id="downloadSlowHelp" class="text-shadow" style="text-align: center;  font-size: 24px; width: 100%; text-decoration: underline; color: white;">Slow Download?</div>
-        <div class=setting-title id="downloadBibleStatus" >You are not connected to the internet</div>
-        <div class=setting-title id="downloadBibleStatusNoConnection" >Network connection is not available. Download is not possible. Connect to the internet, then <span class="linkStyle tryAgain">TRY AGAIN</span></div>
-        <div class=setting-title id="downloadBibleStatusFail" ><p>Download failed.</p> <p class="linkStyle tryAgain">TRY AGAIN</p></div>
-
-	    
-	    			<div id="cancelDownloadButton" class="marqueeNo" style="bottom: 5%; width: 110px">
-			             <div>CANCEL</div>
-			</div>     
-  </div>
-  
-  <div class="content settingsContent" style="display: none" >
-	        <div style="text-align: center; width: 100%; position: absolute; left:50%; top: 30%; transform: translate(-50%, -50%); color:white; font-size: 30px;" >Choose Image Source</div>
-            <div style="text-align: center; width: 100%; background-color: white;">
-                   <a href="../gallery/index.html"  class="watchDeviceButton imageButton noFlash" style="width: 70px; height: 70px;"></a> 
-                   <a href="../cloudGallery/index.html"  class="cloudComputingButton  imageButton noFlash" style="width: 70px; height: 70px;"></a> 
+            <div class="settingOption" style="display: none">
+                <div class=setting-title>Choose Bible Version</div>
+                <div id="backButton" style="width: 100%; padding-bottom:25px; display: none;">
+                    <div class="backButton imageButton noFlash" style="display: block; left: 50%; top: 44%;	transform: translate(-50%, 0%);	"></div>
+                </div>
+                <div id="biblesList" style="width: 100%; height: 100%"></div>
             </div>
-  </div>
-</div>
+
+            <div class="settingOption">
+                <div class=setting-title id="choose_background">Choose Background</div>
+                <div style="text-align: center; width: 100%; background-color: white;">
+                    <!--   <a href="../gallery/index.html"  class="galleryButton imageButton noFlash" style="display: none; width: 70px; height: 70px;"></a> -->
+                    <a href="../cloudGallery/index.html" class="galleryButton imageButton noFlash" style="width: 70px; height: 70px;"></a>
+
+                    <a href="../color/index.html" class="colorsButton  imageButton noFlash" style="width: 70px; height: 70px;"></a>
+
+                </div>
+
+            </div>
+	         <div class="settingOption"  style="display: none">
+		        <div class=setting-title id="textToSpeech">Text to Speech</div>
+	               <div style="text-align: center; width: 100%; margin-bottom: 20%">
+	                   <div class="radioTypeButton" style="display: none">
+	        	          <input type="radio" id="ttson" name="tts_setting" value="on">
+						  <label id="labelOn" for="ttson"></label><br>           
+	                   </div>
+	                   <div class="radioTypeButton" style="display: none">
+						  <input type="radio" id="ttsoff" name="tts_setting" value="off" checked="true">
+						  <label id="labelOff" for="ttsoff"></label><br>                   
+	                   </div>
+	
+	                   <div class="radioTypeButton">
+	                    <div style="display:inline; margin-right: 10%" id="readBible">Read the Bible</div>
+	                    <div style="display: inline; margin-left: 10%">
+	                	    <label class="switch switchTypeButton">
+						       <input type="checkbox">
+						       <span class="slider round"></span>
+						    </label>        
+	                    </div>
+	    
+	                   </div>						
+	                   <div id="speechRateButton" class="radioTypeButton">
+	                       <div id="speechRateButtonLabel">Speech rate</div>             
+	                   </div>					
+	
+	               </div>
+	
+	        </div>        
+        </div>
+        <div class="content settingsContent" style="display: none">
+            <div class="progressCircleContainer progressCircleContainerDownloadingPage" style="z-index: -10;">
+                <svg viewBox="-100 -100 200 200">
+                    <circle class="progressIndicator" id="progressBar" r="100" transform="rotate(-90)" />
+                </svg>
+            </div>
+            <div class="progressCircleContainer progressCircleContainerDownloadingPage" style="z-index: -11;">
+                <svg viewBox="-100 -100 200 200">
+                    <circle class="progressIndicatorTrack" r="100" transform="rotate(-90)" />
+                </svg>
+            </div>
+            <div class=header id=downloadingTitle>Downloading</div>
+            <div id="downloadSlowHelp" class="text-shadow" style="text-align: center;  font-size: 24px; width: 100%; text-decoration: underline; color: white;">Slow Download?</div>
+            <div class=setting-title id="downloadBibleStatus">You are not connected to the internet</div>
+            <div class=setting-title id="downloadBibleStatusNoConnection">Network connection is not available. Download is not possible. Connect to the internet, then <span class="linkStyle tryAgain">TRY AGAIN</span>
+            </div>
+            <div class=setting-title id="downloadBibleStatusFail">
+                <p>Download failed.</p>
+                <p class="linkStyle tryAgain">TRY AGAIN</p>
+            </div>
+
+
+            <div id="cancelDownloadButton" class="marqueeNo" style="bottom: 5%; width: 110px">
+                <div>CANCEL</div>
+            </div>
+        </div>
+
+        <div class="content settingsContent" style="display: none">
+            <div style="text-align: center; width: 100%; position: absolute; left:50%; top: 30%; transform: translate(-50%, -50%); color:white; font-size: 30px;">Choose Image Source</div>
+            <div style="text-align: center; width: 100%; background-color: white;">
+                <a href="../gallery/index.html" class="watchDeviceButton imageButton noFlash" style="width: 70px; height: 70px;"></a>
+                <a href="../cloudGallery/index.html" class="cloudComputingButton  imageButton noFlash" style="width: 70px; height: 70px;"></a>
+            </div>
+        </div>
+    </div>
 
 
 
 
 </body>
+<script src="../../js/tts.js"></script>
+<script src="../../js/ui.js"></script>
+<script src="../../js/page-handler.js"></script>
+<script src="../../js/archive.js"></script>
 
-    <script src="../../js/ui.js"></script>
-    <script src="../../js/page-handler.js"></script>
-    <script src="../../js/archive.js"></script>
+<script src="../../js/filesystem.js"></script>
 
-    <script src="../../js/filesystem.js"></script>
+<script src="../../js/localization.js"></script>
+<script src="../../js/bible.js"></script>
+<script src="../../js/timer.js"></script>
+<script src="../../js/progress.js"></script>
+<script src="../../js/settingsData.js"></script>
+<script src="../../js/listmaker.js"></script>
+<script src="../../js/download.js"></script>
+<script src="../../language.js"></script>
 
-    <script src="../../js/localization.js"></script>
-    <script src="../../js/bible.js"></script>
-    <script src="../../js/timer.js"></script>
-    <script src="../../js/progress.js"></script>
-    <script src="../../js/settingsData.js"></script>
-    <script src="../../js/listmaker.js"></script>
-    <script src="../../js/download.js"></script>
-    <script src="../../language.js"></script>
+<script src="js/app.js"></script>
 
-    <script src="js/app.js"></script>
 </html>

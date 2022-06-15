@@ -244,6 +244,197 @@ var ui = (function(){
 		   element.setAttribute("tizen-circular-scrollbar", "");
 		}
 	}
+	
+	this.hideAlertNotification = function(){
+		  var element = document.getElementById("page_AlertNotificationPage");
+		  element.remove();
+		  console.log("hide alert notification");
+		  
+	};
+	this.showAlertNotification = function(message, callback){
+	   	var divContainer = document.createElement("DIV");
+	   	divContainer.id = "page_AlertNotificationPage";
+	   	
+	   	divContainer.className = "pageAlertNotification";
+      var divInner = document.createElement("DIV");
+      divInner.style.width = "100%";
+      divInner.style.height = "100%";
+      var div_fullScreenVerseContainerAlertNotification = document.createElement("DIV");
+      div_fullScreenVerseContainerAlertNotification.className = "noFlash fullScreenVerseContainerAlertNotification  hideScrollBarTrack";
+      div_alertmessageNotificationText = document.createElement("DIV");
+      div_alertmessageNotificationText.className = "noFlash fullScreenVerseTextAlertNotification  hideScrollBarTrack";
+      div_alertmessageNotificationText.innerHTML = message;
+	   	var divButton = document.createElement("BUTTON");
+	   	divButton.innerHTML = "&#10003;";
+	   	divButton.id = "alertNotificationIDOkButton";
+	   	
+	   	var closeWindow = function(){
+	   		ui.hideAlertNotification();
+	   		if (callback!=null){
+		   		callback();
+	   		}
+
+	   	};
+	   	divButton.addEventListener("click", closeWindow);
+	   	//this.addCircularScrollBar(divContainer);
+      div_fullScreenVerseContainerAlertNotification.appendChild(div_alertmessageNotificationText);
+      divInner.appendChild(div_fullScreenVerseContainerAlertNotification);
+      divContainer.appendChild(divInner);
+	   	divContainer.appendChild(divButton);
+      document.body.appendChild(divContainer);
+	   	
+	   	
+	};
+
+	this.showInputSliderPage = function(message, defaultValue, saveSliderValueCallback){
+
+	   	var divContainer = document.createElement("DIV");
+	   	divContainer.id = "page_AlertNotificationPage";
+	   	
+	   	divContainer.className = "pageAlertNotification";
+    var divInner = document.createElement("DIV");
+    divInner.style.width = "100%";
+    divInner.style.height = "100%";
+    var div_fullScreenVerseContainerAlertNotification = document.createElement("DIV");
+    div_fullScreenVerseContainerAlertNotification.className = "noFlash fullScreenVerseContainerAlertNotification  hideScrollBarTrack";
+    div_alertmessageNotificationText = document.createElement("DIV");
+    div_alertmessageNotificationText.className = "noFlash fullScreenVerseTextAlertNotification  hideScrollBarTrack";
+    
+    var title = document.createElement("DIV");
+    title.innerHTML = message;   
+    title.style = "padding-bottom: 30%; font-size: 30px;";
+
+    title.id = message.replace(/ /g, "") + "value";
+    var plusButton = document.createElement("DIV");
+    plusButton.innerHTML = "+";
+    plusButton.className = "centeredText sliderButton";
+    plusButton.id = "plusButtonId";
+    plusButton.style = "font-size: 50px; left: 80%; width: 60px; height:60px;";
+    var minusButton = document.createElement("DIV");
+    minusButton.innerHTML = "-";     
+    minusButton.id = "minusButtonId";
+    minusButton.className = "centeredText sliderButton";
+    minusButton.style = "font-size: 50px; left: 20%; width: 60px; height:60px;";
+
+    var currentSliderValue = document.createElement("DIV");
+    console.log("defaultValue:" + defaultValue);
+    currentSliderValue.innerHTML = defaultValue;   
+
+    
+    currentSliderValue.id = "currentSliderValue";
+    currentSliderValue.className = "centeredText";
+    currentSliderValue.style = "font-size: 40px;";
+    div_alertmessageNotificationText.appendChild(title);
+    div_alertmessageNotificationText.appendChild(minusButton);
+    div_alertmessageNotificationText.appendChild(currentSliderValue);
+    div_alertmessageNotificationText.appendChild(plusButton);
+    
+	  var divButton = document.createElement("BUTTON");
+	  divButton.innerHTML = "&#10003;";
+	  divButton.id = "alertNotificationIDOkButton";
+	  
+
+	   	//this.addCircularScrollBar(divContainer);
+
+	  var increaseSliderValue = function(){
+	   	  if (parseInt(currentSliderValue.innerHTML)<100){
+      	  currentSliderValue.innerHTML = parseInt(currentSliderValue.innerHTML) + 1; 
+      	  var percentValue = parseInt(currentSliderValue.innerHTML) - 1;
+      	  if (parseInt(currentSliderValue.innerHTML)==100){
+      		  percentValue = 100;
+      	  }
+      	  var percent = (percentValue/100) * 100;
+
+		      progress.setProgress(percent, "progressInputSlider");		
+		      saveSliderValueCallback(currentSliderValue.innerHTML);
+
+		      //tizen.preference.getValue(preferenceValue, currentSliderValue.innerHTML);
+
+  	  }		  
+	  };
+	  
+	  var decreaseSliderValue = function(){
+  	  if (parseInt(currentSliderValue.innerHTML)>1){
+    	    currentSliderValue.innerHTML = parseInt(currentSliderValue.innerHTML) - 1;
+      	    var percentValue = parseInt(currentSliderValue.innerHTML) - 1;
+    	    var percent = (percentValue/100) * 100;
+	        progress.setProgress(percent, "progressInputSlider");		
+		   // tizen.preference.getValue(preferenceValue, currentSliderValue.innerHTML );
+		      saveSliderValueCallback(currentSliderValue.innerHTML);
+
+
+    	  }		  
+	  };
+	  var rotaryEventHandler = function(e) {
+		    if (e.detail.direction === 'CW') {
+
+		    	console.log("CW");
+		    	increaseSliderValue();
+		    } else if (e.detail.direction === 'CCW') {
+
+		    	console.log("CCW");
+		    	decreaseSliderValue();
+
+
+		    	}
+		};
+    plusButton.addEventListener("click", increaseSliderValue );
+    minusButton.addEventListener("click", decreaseSliderValue);
+    document.addEventListener('rotarydetent', rotaryEventHandler, false);
+	  var closeSliderWindow  = function(){
+	      document.removeEventListener('rotarydetent', rotaryEventHandler);
+	      ui.hideAlertNotification();
+
+	  };
+	  divButton.addEventListener("click", closeSliderWindow);
+    var progressCircleContainer = document.createElement("DIV");
+    progressCircleContainer.className = "progressCircleContainer progressCircleContainerDownloadingPage";
+    progressCircleContainer.style = "z-index: -10;";
+    var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttribute('viewBox', '-100 -100 200 200');
+    var circle = document.createElementNS("http://www.w3.org/2000/svg", 'circle');
+    circle.setAttribute("class", "progressIndicator");
+    circle.setAttributeNS(null, 'id', "progressInputSlider");
+
+    circle.setAttribute('r', 100);
+    circle.setAttributeNS(null, 'transform', "rotate(-90)");
+
+    svg.appendChild(circle);
+    progressCircleContainer.appendChild(svg);
+    var progressCircleContainer2 = document.createElement("DIV");
+    progressCircleContainer2.className = "progressCircleContainer progressCircleContainerDownloadingPage";
+    progressCircleContainer2.style = "z-index: -11;";
+    var svg2 = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg2.setAttribute('viewBox', '-100 -100 200 200');
+    var circle2 = document.createElementNS("http://www.w3.org/2000/svg", 'circle');
+    circle2.setAttribute('r', 100);
+    circle2.setAttributeNS(null, 'transform', "rotate(-90)");
+    circle2.setAttribute("class", "progressIndicatorTrack");
+
+
+    svg2.appendChild(circle2);
+    progressCircleContainer2.appendChild(svg2);
+
+    divContainer.appendChild(progressCircleContainer);
+    divContainer.appendChild(progressCircleContainer2);      
+	  div_fullScreenVerseContainerAlertNotification.appendChild(div_alertmessageNotificationText);
+    divInner.appendChild(div_fullScreenVerseContainerAlertNotification);
+    divContainer.appendChild(divInner);
+	  divContainer.appendChild(divButton);
+    document.body.appendChild(divContainer);
+
+	  var percentValue = parseInt(currentSliderValue.innerHTML) - 1;
+	  if (parseInt(currentSliderValue.innerHTML)==100){
+		  percentValue = 100;
+	  }
+	  var percent = (percentValue/100) * 100;
+    progress.setProgress(percent, "progressInputSlider");		
+	
+
+    
+	   	
+	   	
+	};	
 return this;
 }());
 

@@ -532,8 +532,6 @@ function callbackSwipeEvent(direction){
 }
 
 function bindEvents(){
-    tts.setTTSLanguage("en_US");
-
     switchVersionButton = document.querySelector(".switchVersionButton");
     switchVersionButton.addEventListener("click", bible.switchVersionHandler);
     ui.setupGeneralComponents();
@@ -556,6 +554,8 @@ function bindEvents(){
 
     document.querySelector(".addBookMarkTitle").innerHTML = LANG_JSON_DATA["TRANSLATIONS"]["COMMON"]["enterBookmarkTitle"];
     document.getElementById("booksOfTheBible").innerHTML = LANG_JSON_DATA["TRANSLATIONS"]["BROWSE_PAGE"]["book"];
+    document.getElementById("chaptersOfTheBible").innerHTML = LANG_JSON_DATA["TRANSLATIONS"]["BROWSE_PAGE"]["chapter"];
+    document.getElementById("versesOfTheBible").innerHTML = LANG_JSON_DATA["TRANSLATIONS"]["BROWSE_PAGE"]["verse"];
    
     
 }

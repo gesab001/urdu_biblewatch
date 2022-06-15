@@ -2,6 +2,7 @@
 
 var page,
 pageID = "SettingsPage",
+TRANSLATIONS = LANG_JSON_DATA["TRANSLATIONS"]["SETTINGS_PAGE"],
 biblesListPage,
 clockButton,
 sections,
@@ -385,8 +386,15 @@ function showTTSSetting(){
 	ui.showSection(sections, 2);	
 }
 function tts_eventHandler(event){
-	console.log("input id: " + event.target.value);
-	tizen.preference.setValue("tts_settings", event.target.value);
+	console.log("input id: " + this.checked);
+	tizen.preference.setValue("tts_settings", this.checked);
+	if (this.checked){
+		var message = TRANSLATIONS["alertLanguageShouldMatch"].replace("[***]", "(Text-to-speech)").replace("[+++]", "(English (US)");
+		message = message.replace("[+++]", "(English (US)" );
+		ui.showAlertNotification(message, null);
+	}
+	isTTS = this.checked;
+	
 }
 /*
 function showBackgroundSourceOptions(){
@@ -445,19 +453,22 @@ function bindEvents(){
 	textToSpeechButton = document.querySelector(".textToSpeechButton");
 	textToSpeechButton.addEventListener("click", showTTSSetting);
 
-	 var ttsradiobuttons = document.querySelectorAll(".radioTypeButton");
-	 for (var x=0; x<ttsradiobuttons.length; x++){
-			var el = ttsradiobuttons[x];
-			var input = el.querySelector("input");
-			input.addEventListener("change", tts_eventHandler);		
-	 }
+	 var ttsradiobuttons = document.querySelector(".switchTypeButton");
+		// for (var x=0; x<ttsradiobuttons.length; x++){
+				var el = ttsradiobuttons;
+//				var el = ttsradiobuttons[x];
+
+				var input = el.querySelector("input");
+				input.addEventListener("change", tts_eventHandler);		
+		// }
 	 if(tizen.preference.exists("tts_settings")){
 			isTTS = tizen.preference.getValue("tts_settings");
-			if(isTTS==="on"){
-				ttsradiobuttons[0].querySelector("input").checked = true;
+			if(isTTS){
+//					ttsradiobuttons[0].querySelector("input").checked = true;
+				ttsradiobuttons.querySelector("input").checked = true;
 				
 			}else{
-				ttsradiobuttons[1].querySelector("input").checked = true;
+				ttsradiobuttons.querySelector("input").checked = false;
 			}
 		}
 	sections = document.querySelectorAll(".settingsContent");	
@@ -479,8 +490,32 @@ function bindEvents(){
 	backgroundButton.click();
 	tizen.preference.setValue("fromOptionsPage", false);
 	
+    function saveSlidervalue(value){
+    	tizen.preference.setValue("speechratevalue", value);
+		if (isTTS==false){
+			isTTS = true;
+		}
+        tts.setSpeechRate();
+        tts.play(TRANSLATIONS["speechRateSample"]);//In the beginning God created the heaven and the earth");
+    }
+    
+    function getDefaultSliderValue(){
+    	var value = 10;
+    	if (tizen.preference.exists("speechratevalue")){
+    		value = tizen.preference.getValue("speechratevalue");
+    	}
+    	return value;
+    }
+    document.getElementById("speechRateButton").addEventListener("click", function(){
+    	var defaultValue = getDefaultSliderValue();
+    	var pageTitle = TRANSLATIONS["speechRateTitle"];
+    	ui.showInputSliderPage(pageTitle, defaultValue, saveSlidervalue);
+    });
+    
+    document.getElementById("readBible").innerHTML = TRANSLATIONS["readBible"];
+    document.getElementById("speechRateButtonLabel").innerHTML = TRANSLATIONS["speechRateTitle"];
 
-
+    
 }
 
 

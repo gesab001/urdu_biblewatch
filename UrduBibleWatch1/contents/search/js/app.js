@@ -478,7 +478,7 @@ window.onload = function() {
         }
 
         var version = settingsData["bibleversion"].toUpperCase();
-        searchResults.innerHTML = TRANSLATIONS["found"].replace("[VALUE]", resultsCount).replace("[VERSION]", version);//"Found " + resultsCount + " verses <br> in the " + version + " bible";
+        searchResults.innerHTML = TRANSLATIONS["found"].replace("[***]", resultsCount).replace("[+++]", version);//"Found " + resultsCount + " verses <br> in the " + version + " bible";
         console.log("Found " + resultsCount + " verses");
         if (resultsCount > 0) {
         	searchResultsDisplayButton.style.display = "block";

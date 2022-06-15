@@ -19,10 +19,10 @@ LANG_JSON_DATA = {
     "TRANSLATIONS": {
         "COMMON": {
             "of": " / ",
-            "proceedToSaveFavorites": "[TEXTTOSAVE] کو پسندیدہ میں محفوظ کریں؟",
-            "alreadySaveToFavorites": "[TEXTTOSAVE] آپ کے پسندیدہ میں پہلے سے موجود ہے۔",
-            "savedToFavorites": "[TEXTTOSAVE] کو محفوظ کر لیا گیا ہے۔",
-            "alertSaved": "محفوظ کر لیا",
+            "proceedToSaveFavorites": "[***] کو پسندیدہ میں محفوظ کریں؟",
+            "alreadySaveToFavorites": "[***] آپ کے پسندیدہ میں پہلے سے موجود ہے۔",
+            "savedToFavorites": "[***] کو محفوظ کر لیا گیا ہے۔",
+            "alertSaved": "محفوظ کیا گیا۔",
             "addBookmarkButton": "+",
             "enterBookmarkTitle": "بک مارک کا عنوان درج کریں۔",
             "verseNotExist": "اس ترجمے میں یہ آیت غائب ہے۔ اس آیت کے لیے KJV استعمال کریں۔"
@@ -31,7 +31,7 @@ LANG_JSON_DATA = {
             "confirmBackroundChange": "اس رنگ کو پس منظر کے طور پر استعمال کریں؟"
         },
         "BOOKMARKS_PAGE": {
-            "confirmBookmark": "بک مارک [TEXTTOSAVE]؟",
+            "confirmBookmark": "بک مارک [***]؟",
             "bookmarks": "بک مارکس",
             "nobookmarks": "آپ کے پاس کوئی بک مارکس نہیں ہیں۔ کے پاس جاؤ",
             "nobookmarkslink": " کتابیں ",
@@ -39,14 +39,14 @@ LANG_JSON_DATA = {
         },
         "BROWSE_PAGE": {
             "browse": "کتابیں",
-            "go": " > ",
-            "book": "بک"
+            "go": ">",
+            "book": "کتاب"
         },
         "FAVORITEVERSES_PAGE": {
             "title": "پسندیدہ",
             "noFavoriteVerses": "آپ کی کوئی پسندیدہ آیات نہیں ہیں۔",
-            "confirmDelete": "کیا آپ واقعی [TEXTTODELETE] کو حذف کرنا چاہتے ہیں؟",
-            "deletedSuccess": "[TEXTTODELETE] کو حذف کر دیا گیا ہے۔",
+            "confirmDelete": "کیا آپ واقعی [***] کو حذف کرنا چاہتے ہیں؟",
+            "deletedSuccess": "[***] حذف کردیا گیا ہے.",
             "noLookUp": "آپ کے پاس دیکھنے کے لیے کوئی پسندیدہ آیات نہیں ہیں۔"
         },
         "DONATIONS_PAGE": {
@@ -62,7 +62,7 @@ LANG_JSON_DATA = {
         },
         "CLOUDGALLERY_PAGE": {
             "numberOfImages": "5 تصاویر",
-            "chooseCategory": "زمرہ منتخب کریں۔",
+            "chooseCategory": "قسم",
             "confirmChoice": "اسے پس منظر کی تصویر کے طور پر استعمال کریں؟",
             "animals": "جانور",
             "beaches": "ساحل",
@@ -90,18 +90,25 @@ LANG_JSON_DATA = {
         "SEARCH_PAGE": {
             "loadingData": "ڈیٹا لوڈ ہو رہا ہے۔",
             "search": "تلاش کریں۔",
-            "find": " > ",
-            "found": "[VERSION] بائبل میں [VALUE] آیات ملیں۔",
-            "viewResults": "نتائج دیکھیں",
+            "find": ">",
+            "found": "بائبل میں [+++] آیات ملیں۔",
+            "viewResults": "دکھائیں۔",
             "noSearchHistory": "آپ کی تلاش کی کوئی سرگزشت نہیں ہے۔",
             "edit": "ترمیم"
         },
         "SETTINGS_PAGE": {
             "settings": "سیٹنگز",
             "choose_background": "پس منظر کا انتخاب کریں۔",
+            "choose_bibleversion": "بائبل ورژن کا انتخاب کریں۔",
             "textToSpeech": "ٹیکسٹ ٹو اسپیچ",
             "on": "آن کر دو",
-            "off": "بند کرو"
+            "off": "بند کرو",
+            "chooseImageSource": "ماخذ منتخب کریں۔",
+            "confirmTTS": "ٹیکسٹ ٹو اسپیچ آن کریں؟",
+            "alertLanguageShouldMatch": "(نوٹ: یقینی بنائیں کہ آپ کی گھڑی میں TTS [***] زبان اور آپ کے فون کی زبان ایک جیسی ہے۔ مثال کے طور پر، اگر آپ کی گھڑی [+++] پر سیٹ ہے، تو آپ کے فون کی زبان بھی [+++] ہونی چاہیے۔ .",
+            "speechRateSample": "ابتدا میں خدا نے آسمان اور زمین کو پیدا کیا۔",
+            "readBible": "بائبل پڑھیں",
+            "speechRateTitle": "تقریر کی شرح"
         },
         "READINGPLAN_PAGE": {
             "readingPlanPreferences": "ریڈنگ پلان کی ترجیحات",

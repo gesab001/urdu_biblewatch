@@ -216,7 +216,7 @@ var bible = (function() {
             console.log("bookmarkThisButtonHandler");
 
             var textToSave = _book + "\n " + chapter + ":" + verse;
-            var proceedToSave = confirm(LANG_JSON_DATA["TRANSLATIONS"]["BOOKMARKS_PAGE"]["confirmBookmark"].replace("[TEXTTOSAVE]", textToSave ));
+            var proceedToSave = confirm(LANG_JSON_DATA["TRANSLATIONS"]["BOOKMARKS_PAGE"]["confirmBookmark"].replace("[***]", textToSave ));
             console.log("proceedtoSave: " + proceedToSave);
 
 
@@ -359,18 +359,18 @@ var bible = (function() {
         var textToSave = _book + "\n" + chapter + ":" + verse;
 
         var proceed = function(){
-            var proceedToSave = confirm(TRANSLATIONS["proceedToSaveFavorites"].replace("[TEXTTOSAVE]", textToSave)); //confirm("Save\n"+textToSave + "\nto favorites?");
+            var proceedToSave = confirm(TRANSLATIONS["proceedToSaveFavorites"].replace("[***]", textToSave)); //confirm("Save\n"+textToSave + "\nto favorites?");
             if (proceedToSave) {
                 var reference = [book, chapter, verse];
                 var arrayList = JSON.stringify(favoritesList);
                 var array = JSON.stringify(reference);
                 if (arrayList.indexOf(array) != -1) {
-                    //alert(TRANSLATIONS["alreadySaveToFavorites"].replace("[TEXTTOSAVE]", textToSave));
+                    //alert(TRANSLATIONS["alreadySaveToFavorites"].replace("[***]", textToSave));
 
                 } else {
                     favoritesList.push(reference);
                     tizen.preference.setValue("favoriteVerses", JSON.stringify(favoritesList));
-                    //alert(TRANSLATIONS["savedToFavorites"].replace("[TEXTTOSAVE]", textToSave));
+                    //alert(TRANSLATIONS["savedToFavorites"].replace("[***]", textToSave));
                 }
             }       	
         };
