@@ -40,7 +40,9 @@ LANG_JSON_DATA = {
         "BROWSE_PAGE": {
             "browse": "BOOKS",
             "go": ">",
-            "book": "BOOK"
+            "book": "BOOK",
+            "chapter": "CHAPTER",
+            "verse": "VERSE"
         },
         "FAVORITEVERSES_PAGE": {
             "title": "Favorites",

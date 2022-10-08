@@ -30,11 +30,11 @@ var imagesList = {
 	},
 	"crops": {
 		"1": [
-			"/crops/1/1_crops0.jpg",
-			"/crops/1/1_crops1.jpg",
-			"/crops/1/1_crops2.jpg",
 			"/crops/1/1_crops3.jpg",
-			"/crops/1/1_crops4.jpg"
+			"/crops/1/1_crops4.jpg",
+			"/crops/1/1_crops5.jpg",
+			"/crops/1/1_crops6.jpg",
+			"/crops/1/1_crops9.jpg"
 		]
 	},
 	"deserts": {

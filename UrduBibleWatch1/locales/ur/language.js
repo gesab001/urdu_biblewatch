@@ -40,7 +40,9 @@ LANG_JSON_DATA = {
         "BROWSE_PAGE": {
             "browse": "کتابیں",
             "go": ">",
-            "book": "کتاب"
+            "book": "کتاب",
+            "chapter": "باب",
+            "verse": "آیت"
         },
         "FAVORITEVERSES_PAGE": {
             "title": "پسندیدہ",
