@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;UrduBibleWatch1/UrduBibleWatch1_1_0_0.wgt&apos;" deleteContents="false" description="Delete resource &apos;UrduBibleWatch1/UrduBibleWatch1_1_0_0.wgt&apos;" element1="/UrduBibleWatch1/UrduBibleWatch1_1_0_0.wgt" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1665305456251"/>
+</session>
