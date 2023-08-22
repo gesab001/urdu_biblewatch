@@ -15259,7 +15259,7 @@ WebAPIException.DATA_CLONE_ERR = new Number();
 /**
  * 16-bit error code.
  * <p>
-For the possible values of this attribute, see <a href="http://www.w3.ohttp://127.0.0.1:52725/help/topic/dom/#domexception">DOMException</a>.
+For the possible values of this attribute, see <a href="http://www.w3.ohttp://127.0.0.1:51381/help/topic/dom/#domexception">DOMException</a>.
             </p>
  *
  * @type Number
@@ -15278,7 +15278,7 @@ This attribute can have one of the following values:
  * <li>ServiceNotAvailableError - The requested service is not available.
  * </ul>
  * <p>
-For other possible values of this attribute, see the values defined in <a href="http://www.w3.ohttp://127.0.0.1:52725/help/topic/dom/#error-names-0">DOM error names</a>            </p>
+For other possible values of this attribute, see the values defined in <a href="http://www.w3.ohttp://127.0.0.1:51381/help/topic/dom/#error-names-0">DOM error names</a>            </p>
  *
  * @type String
  */
@@ -15386,7 +15386,7 @@ AttributeFilter.prototype.matchValue = new any();
 /**
  * 16-bit error code.
  * <p>
-Possible values are defined in <a href="http://www.w3.ohttp://127.0.0.1:52725/help/topic/dom/#domexception">DOMException</a>.
+Possible values are defined in <a href="http://www.w3.ohttp://127.0.0.1:51381/help/topic/dom/#domexception">DOMException</a>.
             </p>
  *
  * @type Number
@@ -15405,7 +15405,7 @@ This attribute can have one of the following values:
  * <li>ServiceNotAvailableError - The requested service is not available.
  * </ul>
  * <p>
-For other possible values of this attribute, see the values defined in <a href="http://www.w3.ohttp://127.0.0.1:52725/help/topic/dom/#error-names-0">DOM error names</a>            </p>
+For other possible values of this attribute, see the values defined in <a href="http://www.w3.ohttp://127.0.0.1:51381/help/topic/dom/#error-names-0">DOM error names</a>            </p>
  *
  * @type String
  */

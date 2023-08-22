@@ -16,7 +16,7 @@
 		<item value="org.tizen.dynamicanalysis.ide.web.eplugin.feature:2.1.0.201910160605"/>
 		<item value="org.tizen.efluibuilder.feature:1.0.0.201811300142"/>
 		<item value="org.tizen.nativeappcommon.feature:2.0.0.201811300134"/>
-		<item value="org.tizen.nativecommon.feature:2.0.0.202109201324"/>
+		<item value="org.tizen.nativecommon.feature:2.0.0.202201100943"/>
 		<item value="org.tizen.ocf.bridge.feature:2.0.0.201906141449"/>
 		<item value="org.tizen.ocf.cert.feature:2.0.0.202004300845"/>
 		<item value="org.tizen.ocf.core.feature:2.0.0.202004300800"/>

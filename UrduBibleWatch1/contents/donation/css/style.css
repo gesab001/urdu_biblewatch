@@ -1,0 +1,10 @@
+.donationImage{
+	margin-top: 10%;
+    background-image: url("donate_qr_code.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 250px;
+    height: 250px;
+    margin: auto;
+    
+}
